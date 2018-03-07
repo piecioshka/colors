@@ -9,3 +9,8 @@ Click here: https://piecioshka.github.io/colors/
 ## Screenshot
 
 ![](./screenshot.png)
+
+## Popular links with colourful palettes
+
+* http://www.eggradients.club/
+* https://color.adobe.com/pl/explore/newest/
