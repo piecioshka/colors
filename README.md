@@ -14,3 +14,5 @@ Click here: https://piecioshka.github.io/colors/
 
 * http://www.eggradients.club/
 * https://color.adobe.com/pl/explore/newest/
+* https://flatuicolors.com/
+* http://colours.neilorangepeel.com/
