@@ -4,7 +4,7 @@
 
 ## Demo
 
-Click here: https://piecioshka.github.io/colors/
+Click here: <https://piecioshka.github.io/colors/>
 
 ## Screenshot
 
@@ -12,7 +12,8 @@ Click here: https://piecioshka.github.io/colors/
 
 ## Popular links with colourful palettes
 
-* http://www.eggradients.club/
-* https://color.adobe.com/pl/explore/newest/
-* https://flatuicolors.com/
-* http://colours.neilorangepeel.com/
+* <http://www.eggradients.club/>
+* <https://color.adobe.com/pl/explore/newest/>
+* <https://flatuicolors.com/>
+* <http://colours.neilorangepeel.com/>
+* <https://colorleap.app/>
