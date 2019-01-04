@@ -2,9 +2,9 @@
 
 > :art: List of my favourite colors
 
-## Demo
+## Demo 🎉
 
-Click here: <https://piecioshka.github.io/colors/>
+<https://piecioshka.github.io/colors/>
 
 ## Screenshot
 
