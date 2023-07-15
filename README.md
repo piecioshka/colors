@@ -1,6 +1,6 @@
 # colors
 
-> :art: List of my favourite colors
+:art: List of my favourite colors
 
 ## Demo 🎉
 
@@ -12,7 +12,6 @@
 
 ## Popular links with colourful palettes
 
-* <http://www.eggradients.club/>
 * <https://color.adobe.com/pl/explore/newest/>
 * <https://flatuicolors.com/>
 * <http://colours.neilorangepeel.com/>
