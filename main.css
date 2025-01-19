@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
@@ -6,6 +8,8 @@ body {
     margin: 0;
     position: relative;
     overflow: visible;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0 20px;
 }
 
 main {
@@ -14,11 +18,22 @@ main {
     justify-content: center;
 }
 
+h2 {
+    margin: 0;
+    padding: 0 0 5px 0;
+    font-size: 24px;
+    color: #293d51;
+}
+
+.color-sets {
+    margin-bottom: 50px;
+}
+
 .color {
     width: calc(5vw - 5px);
     height: calc(5vw - 5px);
     padding: 3vw 0 0 0;
-    font-size: 18px;
+    font-size: 16px;
 
     overflow: hidden;
     position: relative;
@@ -27,7 +42,7 @@ main {
     border: 3px solid transparent;
     outline: none;
     color: #fff;
-    text-shadow: 0 1px 1px #43576b;
+    text-shadow: 0 0px 2px #43576b;
     font-weight: lighter;
     cursor: pointer;
 
@@ -82,7 +97,7 @@ main {
 
 .color::after {
     display: none;
-    content: 'Copied';
+    content: "Copied";
     position: absolute;
     left: 5px;
     top: 5px;
