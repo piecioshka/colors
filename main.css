@@ -25,6 +25,19 @@ h2 {
     color: #293d51;
 }
 
+h2 em {
+    font-weight: 100;
+}
+
+h2 > a {
+    color: #1680ad;
+    text-decoration: none;
+}
+
+h2 > a:hover {
+    text-decoration: underline;
+}
+
 .color-sets {
     margin-bottom: 50px;
 }

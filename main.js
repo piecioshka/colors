@@ -34,23 +34,32 @@
         return $item;
     }
 
-    function applyColors(url) {
-        return fetch(url)
-            .then((response) => response.json())
-            .then((data) => data.palette)
-            .then((colors) => {
-                const $colorSets = document.createElement("div");
-                $colorSets.classList.add("color-sets");
-                $colorSets.dataset.title = url;
-                const $title = document.createElement("h2");
-                $title.textContent = url.split("/").pop().replace(".json", "");
-                $colorSets.appendChild($title);
-                colors.forEach((color) => {
-                    const $color = renderColor(color);
-                    $colorSets.appendChild($color);
-                });
-                $main.appendChild($colorSets);
-            });
+    async function applyColors(path) {
+        const response = await fetch(path);
+        const { palette, name, link } = await response.json();
+        const $colorSets = document.createElement("div");
+        $colorSets.classList.add("color-sets");
+        $colorSets.dataset.title = name;
+        const $title = document.createElement("h2");
+        const labelHTML = `${name} <em>(${path
+            .split("/")
+            .pop()
+            .replace(".json", "")})</em>`;
+        if (link) {
+            const $link = document.createElement("a");
+            $link.href = link;
+            $link.innerHTML = labelHTML;
+            $link.setAttribute("target", "_blank");
+            $title.append($link);
+        } else {
+            $title.innerHTML = labelHTML;
+        }
+        $colorSets.appendChild($title);
+        palette.forEach((color) => {
+            const $color = renderColor(color);
+            $colorSets.appendChild($color);
+        });
+        $main.appendChild($colorSets);
     }
 
     async function setup() {
