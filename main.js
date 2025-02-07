@@ -87,6 +87,7 @@
         await applyColors("./colors/palette-misc-1.json");
         await applyColors("./colors/palette-misc-2.json");
         await applyColors("./colors/palette-misc-3.json");
+        await applyColors("./colors/palette-misc-4.json");
     }
 
     window.addEventListener("DOMContentLoaded", setup, {
