@@ -14,5 +14,5 @@
 
 - <https://color.adobe.com/pl/explore/newest/>
 - <https://flatuicolors.com/>
-- <http://colours.neilorangepeel.com/>
+- <https://colours.neilorangepeel.com/>
 - <https://colorleap.app/>

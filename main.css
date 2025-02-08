@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --tile-size: calc(5vw - 5px);
+}
+
 body {
     margin: 0;
     position: relative;
@@ -12,10 +16,10 @@ body {
     padding: 0 20px;
 }
 
-main {
+#page {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 h2 {
@@ -27,39 +31,56 @@ h2 {
 
 h2 em {
     font-weight: 100;
+    opacity: 0.4;
 }
 
 h2 > a {
-    color: #1680ad;
+    color: #293d51;
+    font-weight: normal;
     text-decoration: none;
+}
+
+h2 .filename {
+    display: none;
 }
 
 h2 > a:hover {
     text-decoration: underline;
 }
 
+h2:hover .name {
+    display: none;
+}
+
+h2:hover .filename {
+    display: inline-block;
+}
+
 .color-sets {
+    margin: 30px;
     margin-bottom: 50px;
 }
 
 .color {
-    width: calc(5vw - 5px);
-    height: calc(5vw - 5px);
+    width: var(--tile-size);
+    height: var(--tile-size);
     padding: 3vw 0 0 0;
-    font-size: 16px;
 
     overflow: hidden;
     position: relative;
 
-    text-align: right;
+    text-align: center;
     border: 3px solid transparent;
     outline: none;
-    color: #fff;
-    text-shadow: 0 0px 2px #43576b;
-    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
+    font-size: 14px;
 
     transition: 300ms all;
+}
+
+.color.is-light {
+    color: rgba(0, 0, 0, 0.4);
 }
 
 @media screen and (max-width: 1440px) {

@@ -18,9 +18,37 @@
         }
     }
 
+    function isLightColor(hex) {
+        // Remove '#' if present
+        hex = hex.replace(/^#/, "");
+
+        // Convert 3-digit hex to 6-digit
+        if (hex.length === 3) {
+            hex = hex
+                .split("")
+                .map((char) => char + char)
+                .join("");
+        }
+
+        // Parse RGB values
+        let r = parseInt(hex.substring(0, 2), 16);
+        let g = parseInt(hex.substring(2, 4), 16);
+        let b = parseInt(hex.substring(4, 6), 16);
+
+        // Calculate relative luminance
+        let luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+
+        // Return true if light, false if dark
+        return luminance > 0.5;
+    }
+
     function renderColor(color) {
         const $item = document.createElement("button");
         $item.classList.add("color");
+        console.debug("piecioshka", { color });
+        if (isLightColor(color)) {
+            $item.classList.add("is-light");
+        }
         $item.style.backgroundColor = `#${color}`;
         $item.textContent = `#${color}`;
         $item.addEventListener("click", () => {
@@ -41,10 +69,11 @@
         $colorSets.classList.add("color-sets");
         $colorSets.dataset.title = name;
         const $title = document.createElement("h2");
-        const labelHTML = `${name} <em>(${path
-            .split("/")
-            .pop()
-            .replace(".json", "")})</em>`;
+        const filename = path.split("/").pop();
+        const labelHTML = `
+            <span class="name">${name}</span>
+            <em class="filename">${filename}</em>
+        `;
         if (link) {
             const $link = document.createElement("a");
             $link.href = link;
@@ -63,7 +92,7 @@
     }
 
     async function setup() {
-        $main = document.querySelector(".page");
+        $main = document.querySelector("#page");
         $input = document.querySelector(".input-field");
 
         await applyColors("./colors/misc.json");
